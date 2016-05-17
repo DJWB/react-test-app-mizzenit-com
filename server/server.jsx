@@ -7831,7 +7831,7 @@ app.use((req, res, next) => {
                     };
                     let state = __store.getState();
 
-                    html['state'] = `window.__INITIAL_STATE__=${JSON.stringify(state)}`;
+                    html['state'] = `window.__INITIAL_STATE__=${JSON.stringify({})}`;
 
                     res
                         .status(200)

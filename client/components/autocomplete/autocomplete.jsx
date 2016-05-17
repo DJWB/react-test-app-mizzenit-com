@@ -22,8 +22,7 @@ class Autocomplete extends Component {
             isShow: false,
             value: this.props.data ? this.props.data.text : ""
         };
-
-
+        
         if(this.props.autocomplete.type === actions.TYPE_AUTOCOMPLETE_EMPTY){
             this.props.action.load();
         }
@@ -38,11 +37,11 @@ class Autocomplete extends Component {
                 .filter((item) => {
                     return item.text.indexOf(value) !== -1;
             });
-            
+
             if(this.results.length) {
                 this.setState({isShow: true});
             }
-            
+
         } else if (this.state.isShow) {
             this.setState({isShow: false});
         }
